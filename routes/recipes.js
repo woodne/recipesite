@@ -8,7 +8,7 @@ var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('recipedb', server, {safe: true});
 
 db.open(function(err, db) {
-    if (!eff) {
+    if (!err) {
         console.log("Connected to 'recipedb' database");
         db.collection('recipes', {safe:true}, function(err, collection) {
             if (err) {
