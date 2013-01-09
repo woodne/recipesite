@@ -12,7 +12,7 @@ window.RecipeListView = Backbone.View.extend({
         $(this.el).html('<ul class="thumbnails"></ul>');
 
         for (var i = startPos; i < endPos; i++) {
-            $('.thumbnails', this.el).append(new RecipeListView({model: recipes[i]}).render().el);
+            $('.thumbnails', this.el).append(new RecipeListItemView({model: recipes[i]}).render().el);
         }
 
         $(this.el).append(new Paginator({model: this.model, page: this.options.page}).render().el);
