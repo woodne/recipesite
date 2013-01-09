@@ -5,7 +5,7 @@ window.Recipe = Backbone.Model.extend({
     initialize: function() {
         this.validators = {};
 
-        this.validators.name = function(value) {
+        this.validators.title = function(value) {
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a name"};
         };
 
